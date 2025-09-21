@@ -12,16 +12,18 @@ A aplicação foi desenvolvida com **Java 21**, **Spring Boot**, **JPA/Hibernate
 
 # Índice
 
-1.  [Adaptação e Melhorias no Modelo de Dados](#adaptação-e-melhorias-no-modelo-de-dados)
-2.  [Escolhas Técnicas](#escolhas-técnicas)
-3.  [Requisitos de Ambiente](#requisitos-de-ambiente)
-4.  [Instruções para Execução](#instruções-para-execução)
-5.  [Descrição das Rotas da API](#descrição-das-rotas-da-api)
-6.  [Estrutura de Pastas](#estrutura-de-pastas)
+1.  [Análise e Adaptação do Modelo de Dados](#análise-e-adaptação-do-modelo-de-dados)
+2.  [Respondendo ao Desafio](#respondendo-ao-desafio)
+3.  [Simplicidade e Foco no Desafio](#simplicidade-e-foco-no-desafio)
+4.  [Escolhas Técnicas](#escolhas-técnicas)
+5.  [Requisitos de Ambiente](#requisitos-de-ambiente)
+6.  [Instruções para Execução](#instruções-para-execução)
+7.  [Descrição das Rotas da API](#descrição-das-rotas-da-api)
+8.  [Estrutura de Pastas](#estrutura-de-pastas)
 
 ---
 
-## Análise e Correção do Modelo de Dados
+## Análise e Adaptação do Modelo de Dados
 
 O modelo de dados é a fundação de qualquer sistema. O diagrama ER fornecido no desafio serviu como um ponto de partida conceitual, mas uma análise detalhada revelou inconsistências lógicas que impediam a criação de um schema de banco de dados funcional e coerente.
 
