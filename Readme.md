@@ -175,8 +175,26 @@ A API estará acessível em **`http://localhost:8080`**.
 
 Após a inicialização, você pode testar os endpoints utilizando `curl` ou uma ferramenta de sua preferência (Postman, Insomnia, etc.).
 
-### **`GET /reports/professor-hours`**
+### Documentação Interativa (Swagger)
+Para facilitar a exploração e o teste da API, uma documentação interativa foi gerada automaticamente com Swagger (OpenAPI).
+
+Com a aplicação rodando, acesse o seguinte link no seu navegador:
+
+**[http://localhost:8080/docs](http://localhost:8080/docs)**
+
+Nesta página, você poderá:
+- Visualizar todos os endpoints de forma organizada.
+- Ver os detalhes de cada parâmetro de requisição.
+- Inspecionar os schemas de resposta.
+- **Testar cada endpoint diretamente pelo navegador.**
+
+### **`GET /reports/hours-per-professor`**
 **Descrição:** Retorna a quantidade total de horas semanais comprometidas por cada professor.
+
+**Comando ``curl``**:
+```bash
+curl http://localhost:8080/reports/hours-per-professor
+```
 
 **Exemplo de Resposta:**
 ```json
@@ -203,10 +221,15 @@ Após a inicialização, você pode testar os endpoints utilizando `curl` ou uma
 **Descrição:** Retorna a grade de horários ocupados para um determinado dia da semana.
 
 **Parâmetros:**
-- `dayOfWeek` (obrigatório): `Short` - O dia da semana (1 para Segunda, 2 para Terça, etc.).
+- `day` (obrigatório): `Short` - O dia da semana (1 para Segunda, 2 para Terça, etc.).
 
 **Exemplo de Requisição (para Segunda-feira):**
-`http://localhost:8080/reports/room-schedules?dayOfWeek=1`
+`http://localhost:8080/reports/room-schedules?day=1`
+
+**Comando ``curl``**:
+```bash
+curl http://localhost:8080/reports/room-schedules?day=1
+```
 
 **Exemplo de Resposta:**
 ```json
@@ -228,12 +251,17 @@ Após a inicialização, você pode testar os endpoints utilizando `curl` ou uma
 **Descrição:** Calcula e retorna os intervalos de tempo livres para as salas em um determinado dia e período.
 
 **Parâmetros:**
-- `dayOfWeek` (obrigatório): `Short` - O dia da semana.
-- `startOfDay` (obrigatório): `String` - A hora de início do período (formato `HH:mm:ss`).
-- `endOfDay` (obrigatório): `String` - A hora de término do período (formato `HH:mm:ss`).
+- `day` (obrigatório): `Short` - O dia da semana.
+- `dayStart` (obrigatório): `String` - A hora de início do período (formato `HH:mm:ss`).
+- `dayEnd` (obrigatório): `String` - A hora de término do período (formato `HH:mm:ss`).
 
 **Exemplo de Requisição (para Segunda-feira, das 07h às 18h):**
-`http://localhost:8080/reports/room-free-intervals?dayOfWeek=1&startOfDay=07:00:00&endOfDay=18:00:00`
+`http://localhost:8080/reports/room-free-intervals?day=1&dayStart=07:00:00&dayEnd=18:00:00`
+
+**Comando ``curl``**:
+```bash
+curl "http://localhost:8080/reports/room-free-intervals?day=1&dayStart=07:00:00&dayEnd=18:00:00"
+```
 
 **Exemplo de Resposta:**
 ```json
