@@ -29,7 +29,7 @@ O modelo de dados é a fundação de qualquer sistema. O diagrama ER fornecido n
 
 **Problema proposto:**
 
-![Diagrama ER](./assets/escolinha-proposta.png)
+![Image](https://github.com/user-attachments/assets/9c18a6e7-829e-422e-9fe4-5acf689d6bb3)
 
 Para viabilizar o desenvolvimento, foi necessário interpretar e corrigir esses pontos. As principais questões levantadas no diagrama original e as soluções aplicadas no modelo final são detalhadas abaixo:
 
@@ -48,7 +48,7 @@ Para viabilizar o desenvolvimento, foi necessário interpretar e corrigir esses 
 Abaixo, o modelo final implementado:
 
 **Depois (Modelo Implementado e Corrigido):**
-![Diagrama ER Implementado e Corrigido](./assets/escolinha.png)
+![Image](https://github.com/user-attachments/assets/3ac020e4-a2a9-4160-bf7f-0c338189fea7)
 
 Em suma, as correções foram essenciais para transformar o esboço inicial em um schema de banco de dados robusto, normalizado e, o mais importante, funcional, permitindo que as consultas do desafio fossem implementadas de forma correta e eficiente.
 
