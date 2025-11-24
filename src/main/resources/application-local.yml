@@ -1,0 +1,10 @@
+spring:
+  docker:
+    compose:
+      enabled: false
+  datasource:
+    url: jdbc:postgresql://localhost:5432/escolinha
+    username: test
+    password: test
+  flyway:
+    enabled: true 
